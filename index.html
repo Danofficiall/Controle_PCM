@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="FleetOps PCM — gestão de frotas e planejamento e controle da manutenção.">
+  <title>FleetOps PCM | Gestão de Frotas</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">F</div>
+        <div><strong>FleetOps <span>PCM</span></strong><small>Gestão de Frotas</small></div>
+      </div>
+      <div class="sidebar-label">ÁREA OPERACIONAL</div>
+      <nav id="main-nav" class="main-nav" aria-label="Navegação principal"></nav>
+      <div class="sidebar-footer">
+        <div class="status-dot"></div>
+        <div><strong>Ambiente de demonstração</strong><small>Dados salvos neste navegador</small></div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <section class="institutional-banner" aria-label="Identidade institucional">
+        <div class="institutional-brand">
+          <div class="institutional-mark" aria-hidden="true">F</div>
+          <div><strong>FleetOps PCM</strong><span>Planejamento e Controle da Manutenção</span></div>
+        </div>
+        <div class="branding-upload">
+          <img id="header-logo-preview" class="header-logo-preview" alt="Logotipo institucional" hidden>
+          <label class="upload-control" for="header-image-input">＋ Personalizar cabeçalho</label>
+          <input class="visually-hidden" type="file" id="header-image-input" accept="image/png,image/jpeg,image/webp,image/svg+xml">
+        </div>
+      </section>
+      <header class="topbar">
+        <button class="icon-button menu-toggle" id="menu-toggle" aria-label="Abrir menu">☰</button>
+        <div class="breadcrumb"><span>FleetOps PCM</span><b>/</b><strong id="breadcrumb-current">Painel</strong></div>
+        <div class="topbar-actions">
+          <span class="environment-chip">DESENVOLVIMENTO</span>
+          <div class="avatar" title="Usuário demonstrativo">PCM</div>
+        </div>
+      </header>
+
+      <section class="page-content">
+        <div id="page-heading" class="page-heading"></div>
+        <div id="page-body"></div>
+      </section>
+      <footer class="app-footer">
+        <div class="footer-identity">
+          <img id="footer-logo-preview" class="footer-logo-preview" alt="Logotipo complementar" hidden>
+          <div><strong>FleetOps PCM</strong><span>Planejamento e Controle da Manutenção</span></div>
+        </div>
+        <div class="footer-meta">
+          <label class="footer-upload" for="footer-image-input">＋ Imagem institucional</label>
+          <input class="visually-hidden" type="file" id="footer-image-input" accept="image/png,image/jpeg,image/webp,image/svg+xml">
+          <span>Protótipo de interface · Não utilizar para dados operacionais reais</span>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <div class="toast-region" id="toast-region" aria-live="polite"></div>
+
+  <dialog id="record-dialog" class="record-dialog">
+    <form id="record-form" method="dialog">
+      <div class="dialog-header">
+        <div><span class="eyebrow" id="dialog-eyebrow">REGISTRO</span><h2 id="dialog-title">Novo registro</h2></div>
+        <button type="button" class="icon-button" id="dialog-close" aria-label="Fechar">✕</button>
+      </div>
+      <div id="form-fields" class="form-grid"></div>
+      <div class="dialog-actions">
+        <button type="button" class="button button-secondary" id="dialog-cancel">Cancelar</button>
+        <button type="submit" class="button button-primary">Salvar registro</button>
+      </div>
+    </form>
+  </dialog>
+</body>
+</html>
